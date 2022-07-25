@@ -7,11 +7,15 @@ Created on Wed Jul 13 20:41:22 2022
 import psycopg2
 import os
 from dotenv import load_dotenv
+import pandas as pd
+
+# loading season dataframe 
+season_df = pd.read_csv('season_stats_dataframe.csv')
 
 # getting environmental variables to access db
 load_dotenv()
 
-#establishing the connection
+# establishing the connection
 conn = psycopg2.connect(
    database=os.getenv('database'), 
    user=os.getenv('user'),
@@ -20,7 +24,7 @@ conn = psycopg2.connect(
    port=os.getenv('port')
 )
 
-#Creating a cursor object using the cursor() method
+# creating a cursor object using the cursor() method
 cursor = conn.cursor()
 
 conn.commit()
