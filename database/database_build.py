@@ -4,9 +4,9 @@ Created on Wed Jul 13 17:28:54 2022
 
 @author: Jacqueline Kelly
 """
-# from ..functions.readurl import *
-
-from Documents.ncaaproject.ncaawlaxapi.functions.readurl import *
+import sys
+sys.path.append("C:/Users/Base/Documents/ncaaproject/ncaawlaxapi/functions")
+from readurl import *
 
 # Get full list of ncaa team ids
 team_ids = get_team_id("https://stats.ncaa.org/selection_rankings/nitty_gritties/27163")
@@ -47,6 +47,6 @@ season_df = pd.DataFrame.from_dict(dictionary, orient='index')
 
 season_df['team_name'] = pd.Series(dict_team_names)
 
-# season_df.to_csv("C:/Users/Base/Documents/ncaaproject/ncaawlaxapi/database/season_stats_dataframe.csv")
+season_df.to_csv("C:/Users/Base/Documents/ncaaproject/ncaawlaxapi/database/season_stats_dataframe.csv")
 
 
