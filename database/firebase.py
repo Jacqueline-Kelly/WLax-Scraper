@@ -27,5 +27,6 @@ df.rename(columns={'Unnamed: 0': 'ncaa_id'}, inplace=True)
 df_dict = df.to_dict(orient='records')
 
 # Add season stats to firebase with the ncaa_id key as the document id
+## To Do : remove ncaa_id from document, keep solely as doucment id
 list(map(lambda team: db_ref.add(team, str(team['ncaa_id'])), df_dict))
 
