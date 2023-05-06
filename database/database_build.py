@@ -5,7 +5,6 @@ Created on Wed Jul 13 17:28:54 2022
 @author: Jacqueline Kelly
 """
 import sys
-sys.path.append("C:/Users/Base/Documents/ncaaproject/ncaawlaxapi/functions")
 from readurl import *
 
 # Get full list of ncaa team ids
