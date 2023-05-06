@@ -47,6 +47,6 @@ season_df = pd.DataFrame.from_dict(dictionary, orient='index')
 
 season_df['team_name'] = pd.Series(dict_team_names)
 
-season_df.to_csv("C:/Users/Base/Documents/ncaaproject/ncaawlaxapi/database/season_stats_dataframe.csv")
+
 
 
